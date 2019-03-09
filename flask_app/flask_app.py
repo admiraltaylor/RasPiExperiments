@@ -21,14 +21,13 @@ def test():
 	return render_template('index.html')
 
 # Route for sending morse messages to the pi
-@app.route('/morse', methods=['POST'])
+@app.route('/morse', methods=['POST', 'GET'])
 def morse():
 	if request.method == 'POST':
 		message = request.form['message']
 		print(message)
 		ConvertToMorse.blink_morse_message(message)
-	else:
-		return render_template('index.html')
+	return render_template('index.html')		
 
 #if code is run from terminal
 if __name__ == "__main__":

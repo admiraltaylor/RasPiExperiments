@@ -17,7 +17,7 @@ def main():
 # test route
 @app.route("/test")
 def test():
-	ConvertToMorse.blink_morse_message("Howdy")
+	# ConvertToMorse.blink_morse_message("Howdy")
 	return render_template('index.html')
 
 # Route for sending morse messages to the pi
@@ -26,6 +26,8 @@ def morse():
 	if request.method == 'POST':
 		message = request.json['message']
 		ConvertToMorse.blink_morse_message(message)
+	else:
+		return render_template('index.html')
 
 #if code is run from terminal
 if __name__ == "__main__":

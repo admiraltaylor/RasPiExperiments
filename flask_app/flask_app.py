@@ -6,6 +6,9 @@ import ConvertToMorse
 # Create a flask object named app
 app = Flask(__name__)
 
+# set up GPIO
+ConvertToMorse.set_up_gpio()
+
 # When someone will enter the IP address of Raspberry Pi in the browser, below code will run.
 @app.route("/")
 def main():

@@ -21,16 +21,21 @@ MorseDict = { 'A':'.-', 'B':'-...',
                     '?':'..--..', '/':'-..-.', '-':'-....-', 
                     '(':'-.--.', ')':'-.--.-', ' ': ' '} 
 
-# Setting up GPIO Pins
-GPIO.setmode(GPIO.BOARD)
+def set_up_gpio():
+    try:
+        # Setting up GPIO Pins
+        GPIO.setmode(GPIO.BOARD)
 
-# I'm setting up all three so I can use an rgb led
-GPIO.setup(11,GPIO.OUT)
-GPIO.output(11,1)
-GPIO.setup(13,GPIO.OUT)
-GPIO.output(13,1)
-GPIO.setup(15,GPIO.OUT)
-GPIO.output(15,1)
+        # I'm setting up all three so I can use an rgb led
+        GPIO.setup(11,GPIO.OUT)
+        GPIO.output(11,1)
+        GPIO.setup(13,GPIO.OUT)
+        GPIO.output(13,1)
+        GPIO.setup(15,GPIO.OUT)
+        GPIO.output(15,1)
+    except:
+        GPIO.cleanup()
+        set_up_gpio()
 
 # converts text to dots and dashes
 def convert_to_morse(text):
@@ -91,4 +96,3 @@ def convert_input_to_morse():
     except KeyboardInterrupt:
         GPIO.cleanup()
         keep_going = False
-

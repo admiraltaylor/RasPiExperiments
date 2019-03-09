@@ -24,7 +24,8 @@ def test():
 @app.route('/morse', methods=['POST'])
 def morse():
 	if request.method == 'POST':
-		message = request.json['message']
+		message = request.form['message']
+		print(message)
 		ConvertToMorse.blink_morse_message(message)
 	else:
 		return render_template('index.html')

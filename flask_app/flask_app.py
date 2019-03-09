@@ -1,5 +1,5 @@
 # Importing the flask module
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 # import translation and blinky code
 import ConvertToMorse
 

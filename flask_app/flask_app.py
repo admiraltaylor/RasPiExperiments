@@ -1,6 +1,5 @@
 # Importing the flask module
 from flask import Flask, request, jsonify, render_template
-import asyncio
 
 # import translation and blinky code
 import ConvertToMorse
@@ -24,11 +23,11 @@ def test():
 
 # Route for sending morse messages to the pi
 @app.route('/morse', methods=['POST', 'GET'])
-async def morse():
+def morse():
 	if request.method == 'POST':
 		message = request.form['message']
 		print(message)
-		await ConvertToMorse.blink_morse_message(message)
+		ConvertToMorse.blink_morse_message(message)
 	return render_template('index.html')		
 
 #if code is run from terminal

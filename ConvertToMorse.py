@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import random
 import time
+import asyncio
 
 """ A lil program that converts a string to an LED blinking Morse Code"""
 
@@ -21,16 +22,23 @@ MorseDict = { 'A':'.-', 'B':'-...',
                     '?':'..--..', '/':'-..-.', '-':'-....-', 
                     '(':'-.--.', ')':'-.--.-', ' ': ' '} 
 
-# Setting up GPIO Pins
-GPIO.setmode(GPIO.BOARD)
+def set_up_gpio():
+    try:
+        GPIO.cleanup()
+        
+        # Setting up GPIO Pins
+        GPIO.setmode(GPIO.BOARD)
 
-# I'm setting up all three so I can use an rgb led
-GPIO.setup(11,GPIO.OUT)
-GPIO.output(11,1)
-GPIO.setup(13,GPIO.OUT)
-GPIO.output(13,1)
-GPIO.setup(15,GPIO.OUT)
-GPIO.output(15,1)
+        # I'm setting up all three so I can use an rgb led
+        GPIO.setup(11,GPIO.OUT)
+        GPIO.output(11,1)
+        GPIO.setup(13,GPIO.OUT)
+        GPIO.output(13,1)
+        GPIO.setup(15,GPIO.OUT)
+        GPIO.output(15,1)
+    except:
+        GPIO.cleanup()
+        set_up_gpio()
 
 # converts text to dots and dashes
 def convert_to_morse(text):
@@ -72,7 +80,8 @@ def blink_morse_character(char):
         print('space')
         time.sleep(.5)
 
-def blink_morse_message(morse):
+async def blink_morse_message(text):
+    morse = convert_to_morse(text)
     for letter in morse:
                 for char in letter:
                     blink_morse_character(char)

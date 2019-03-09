@@ -18,7 +18,7 @@ def main():
 @app.route("/test")
 def test():
 	ConvertToMorse.blink_morse_message("Howdy")
-	return "Test!"
+	return render_template('index.html')
 
 # Route for sending morse messages to the pi
 @app.route('/morse', methods=['POST'])

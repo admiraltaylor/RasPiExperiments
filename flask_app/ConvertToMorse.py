@@ -80,7 +80,7 @@ def blink_morse_character(char):
         print('space')
         time.sleep(.5)
 
-async def blink_morse_message(text):
+def blink_morse_message(text):
     morse = convert_to_morse(text)
     for letter in morse:
                 for char in letter:

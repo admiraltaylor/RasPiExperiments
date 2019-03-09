@@ -92,3 +92,4 @@ def convert_input_to_morse():
         GPIO.cleanup()
         keep_going = False
 
+convert_input_to_morse()

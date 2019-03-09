@@ -23,6 +23,8 @@ MorseDict = { 'A':'.-', 'B':'-...',
 
 def set_up_gpio():
     try:
+        GPIO.cleanup()
+        
         # Setting up GPIO Pins
         GPIO.setmode(GPIO.BOARD)
 
@@ -77,7 +79,8 @@ def blink_morse_character(char):
         print('space')
         time.sleep(.5)
 
-def blink_morse_message(morse):
+def blink_morse_message(text):
+    morse = convert_to_morse(text)
     for letter in morse:
                 for char in letter:
                     blink_morse_character(char)

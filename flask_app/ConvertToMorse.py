@@ -80,7 +80,7 @@ def blink_morse_character(char):
         print('space')
         time.sleep(.5)
 
-async def blink_morse_message(text):
+def blink_morse_message(text):
     morse = convert_to_morse(text)
     for letter in morse:
                 for char in letter:
@@ -100,5 +100,3 @@ def convert_input_to_morse():
     except KeyboardInterrupt:
         GPIO.cleanup()
         keep_going = False
-
-convert_input_to_morse()

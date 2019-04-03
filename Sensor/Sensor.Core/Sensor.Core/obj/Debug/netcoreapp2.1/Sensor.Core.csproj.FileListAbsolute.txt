@@ -1,0 +1,11 @@
+C:\Users\admir\Documents\Projects\Experiments\Sensor\Sensor.Core\Sensor.Core\bin\Debug\netcoreapp2.1\Sensor.Core.deps.json
+C:\Users\admir\Documents\Projects\Experiments\Sensor\Sensor.Core\Sensor.Core\bin\Debug\netcoreapp2.1\Sensor.Core.runtimeconfig.json
+C:\Users\admir\Documents\Projects\Experiments\Sensor\Sensor.Core\Sensor.Core\bin\Debug\netcoreapp2.1\Sensor.Core.runtimeconfig.dev.json
+C:\Users\admir\Documents\Projects\Experiments\Sensor\Sensor.Core\Sensor.Core\bin\Debug\netcoreapp2.1\Sensor.Core.dll
+C:\Users\admir\Documents\Projects\Experiments\Sensor\Sensor.Core\Sensor.Core\bin\Debug\netcoreapp2.1\Sensor.Core.pdb
+C:\Users\admir\Documents\Projects\Experiments\Sensor\Sensor.Core\Sensor.Core\obj\Debug\netcoreapp2.1\Sensor.Core.csprojAssemblyReference.cache
+C:\Users\admir\Documents\Projects\Experiments\Sensor\Sensor.Core\Sensor.Core\obj\Debug\netcoreapp2.1\Sensor.Core.csproj.CoreCompileInputs.cache
+C:\Users\admir\Documents\Projects\Experiments\Sensor\Sensor.Core\Sensor.Core\obj\Debug\netcoreapp2.1\Sensor.Core.AssemblyInfoInputs.cache
+C:\Users\admir\Documents\Projects\Experiments\Sensor\Sensor.Core\Sensor.Core\obj\Debug\netcoreapp2.1\Sensor.Core.AssemblyInfo.cs
+C:\Users\admir\Documents\Projects\Experiments\Sensor\Sensor.Core\Sensor.Core\obj\Debug\netcoreapp2.1\Sensor.Core.dll
+C:\Users\admir\Documents\Projects\Experiments\Sensor\Sensor.Core\Sensor.Core\obj\Debug\netcoreapp2.1\Sensor.Core.pdb
